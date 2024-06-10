@@ -5,17 +5,20 @@ var swiper = new Swiper('.mySwiper', {
   grabCursor: true,
   spaceBetween: 200,
   centeredSlides: true,
+  
   slidesPerView: 'auto',
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
     depth: 300,
     modifier: 1,
-    slideShadows: false,
+    slideShadows: true,
   },
+  
   
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
