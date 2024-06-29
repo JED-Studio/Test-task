@@ -2,8 +2,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const items = [
     {
       "id": 1,
-      "title": "Dota 2 is a multiplayer online battle arena by Valve...",
-      "title1": "T,fy",
+      "title": "Прораб",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "../images/svg/icon 1.svg",
+      "imageUrl1": "../images/svg/icon 2.svg",
+      "imageUrl2": "../images/svg/icon 3.svg",
+    },
+    {
+      "id": 2,
+      "title": "Раб",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "../images/svg/icon 1.svg",
+      "imageUrl1": "../images/svg/icon 2.svg",
+      "imageUrl2": "../images/svg/icon 3.svg",
+    },
+    {
+      "id": 3,
+      "title": "Программист",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "../images/svg/icon 1.svg",
+      "imageUrl1": "../images/svg/icon 2.svg",
+      "imageUrl2": "../images/svg/icon 3.svg",
+    },
+    {
+      "id": 4,
+      "title": "Уборщик",
+      "title1": "ОТ 100000 РУБ",
       "imageUrl": "../images/svg/icon 1.svg",
       "imageUrl1": "../images/svg/icon 2.svg",
       "imageUrl2": "../images/svg/icon 3.svg",
@@ -54,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     jobImg.appendChild(title);
 
     const title1 = document.createElement('p');
-    title1.style.cssText = 'margin-left: 20px; font-weight: 700; font-size: 28px; color: white;';
+    title1.style.cssText = 'margin-left: 20px; font-weight: 700; font-size: 28px; color: #21A038;';
     title1.textContent = item.title1;
     jobImg1.appendChild(title1);
     
