@@ -32,6 +32,22 @@ document.addEventListener('DOMContentLoaded', function () {
       "imageUrl1": "../images/svg/icon 2.svg",
       "imageUrl2": "../images/svg/icon 3.svg",
     },
+    {
+      "id": 5,
+      "title": "Уборщик",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "../images/svg/icon 1.svg",
+      "imageUrl1": "../images/svg/icon 2.svg",
+      "imageUrl2": "../images/svg/icon 3.svg",
+    },
+    {
+      "id": 6,
+      "title": "Уборщик",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "../images/svg/icon 1.svg",
+      "imageUrl1": "../images/svg/icon 2.svg",
+      "imageUrl2": "../images/svg/icon 3.svg",
+    },
     
   ];
 
