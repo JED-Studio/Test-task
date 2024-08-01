@@ -1,30 +1,36 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
+    const openModalButtons = document.querySelectorAll('[id^=openModal]');
+    const closeModalButtons = document.querySelectorAll('.close');
 
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.id.replace('open', '').toLowerCase();
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10); // Небольшая задержка для запуска перехода
+        });
+    });
 
-let isExpanded = false; // Флаг для отслеживания текущего состояния высоты
-    let isRotated = false; // Флаг для отслеживания состояния вращения кнопки
+    const closeModal = (modal) => {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 400); // Соответствует времени перехода в CSS (0.4s)
+    };
 
-    function clickButton() {
-      const div = document.getElementById('section_job__post');
-      const img = document.getElementById('section_job__img');
-      
-      // Изменение высоты блока
-      if (!isExpanded) {
-        div.style.height = '300px';
-        isExpanded = true;
-      } else {
-        div.style.height = '160px';
-        isExpanded = false;
-      }
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            closeModal(modal);
+        });
+    });
 
-      // Вращение изображения внутри кнопки
-      if (!isRotated) {
-        img.classList.add('rotated');
-        isRotated = true;
-      } else {
-        img.classList.remove('rotated');
-        isRotated = false;
-      }
-    }
-
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            closeModal(event.target);
+        }
+    });
 });
