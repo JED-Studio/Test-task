@@ -210,11 +210,15 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   const sectionJob = document.getElementById('section_jobID');
-
+  
+  
+ 
   function createJobPost(item) {
     const jobPost = document.createElement('div');
     jobPost.className = 'section_job__post';
-    jobPost.style.cssText = 'padding: 30px 45px; align-items: center;';
+    jobPost.id = "section_job__post"; 
+
+    jobPost.style.cssText = 'padding: 30px 45px; align-items: center; overflow: hidden; height: 160px; transition: height 0.3s ease;';
 
     const jobContainer = document.createElement('div');
     jobContainer.className = 'section_job__container';
@@ -255,6 +259,7 @@ document.addEventListener('DOMContentLoaded', function () {
     jobImg2.className = 'section_job__plus';
 
     const image2 = document.createElement('img');
+    image2.id = "section_job__img"; 
     image2.src = item.imageUrl2;
     image2.alt = 'Иконка';
     jobImg2.appendChild(image2);
@@ -267,25 +272,51 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const textContainer = document.createElement('div');
     textContainer.className = 'section_job__text-container';
+    textContainer.style.cssText = 'color: white; margin-top: 20px; ';
 
-    item.h3.forEach((h3Array, index) => {
-      h3Array.forEach(h3Text => {
-          const h3 = document.createElement('h3');
-          h3.textContent = h3Text;
-          const ul = document.createElement('ul');
-          item.li[index].forEach(liText => {
-              const li = document.createElement('li');
-              li.textContent = liText;
-              ul.appendChild(li);
-          });
-          textContainer.appendChild(h3);
-          textContainer.appendChild(ul);
-      });
-  });
-  
+   item.h3.forEach((h3Array, index) => {
+    h3Array.forEach(h3Text => {
+        const h3 = document.createElement('h3');
+        h3.textContent = h3Text;
+        const ul = document.createElement('ul');
+        item.li[index].forEach(liText => {
+            const li = document.createElement('li');
+            li.textContent = liText;
+            ul.appendChild(li);
+        });
+        textContainer.appendChild(h3);
+        textContainer.appendChild(ul);
+    });
+});
+
 
     jobPost.appendChild(jobContainer);
     jobPost.appendChild(textContainer);
+
+    image2.style.transition = 'transform 0.2s'; // Добавить переход для вращения
+
+    image2.onclick = function() {
+      // Найти родительский элемент jobPost
+      const jobPost = this.closest('.section_job__post');
+      
+      if (jobPost.style.height === '160px' || jobPost.style.height === '') {
+        // Установить высоту на 'auto', чтобы контент определил высоту
+        jobPost.style.height = 'auto';
+        const autoHeight = jobPost.scrollHeight + 'px';
+        jobPost.style.height = '160px';
+        setTimeout(() => {
+          jobPost.style.height = autoHeight;
+        }, 10);
+        this.style.transform = 'rotate(45deg)';
+      } else {
+        // Устанавливаем конкретную высоту для анимации
+        jobPost.style.height = '160px';
+        this.style.transform = 'rotate(0deg)';
+      }
+    };
+    
+    
+  
 
     return jobPost;
 }
