@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const items = [
     {
       "id": 1,
+      "category": "construction",
       "title": "Прораб",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
@@ -10,6 +11,57 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       "id": 2,
+      "category": "construction",
+      "title": "Раб",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "images/svg/icon 1.svg",
+      "imageUrl1": "images/svg/icon 2.svg",
+      "imageUrl2": "images/svg/icon 3.svg",
+    },
+    
+    {
+      "id": 2,
+      "category": "office",
+      "title": "Раб",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "images/svg/icon 1.svg",
+      "imageUrl1": "images/svg/icon 2.svg",
+      "imageUrl2": "images/svg/icon 3.svg",
+    },
+    
+    {
+      "id": 2,
+      "category": "office",
+      "title": "Раб",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "images/svg/icon 1.svg",
+      "imageUrl1": "images/svg/icon 2.svg",
+      "imageUrl2": "images/svg/icon 3.svg",
+    },
+    
+    {
+      "id": 2,
+      "category": "finance",
+      "title": "Раб",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "images/svg/icon 1.svg",
+      "imageUrl1": "images/svg/icon 2.svg",
+      "imageUrl2": "images/svg/icon 3.svg",
+    },
+    
+    {
+      "id": 2,
+      "category": "finance",
+      "title": "Раб",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "images/svg/icon 1.svg",
+      "imageUrl1": "images/svg/icon 2.svg",
+      "imageUrl2": "images/svg/icon 3.svg",
+    },
+    
+    {
+      "id": 2,
+      "category": "sales",
       "title": "Раб",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
@@ -17,37 +69,33 @@ document.addEventListener('DOMContentLoaded', function () {
       "imageUrl2": "images/svg/icon 3.svg",
     },
     {
-      "id": 3,
-      "title": "Программист",
+      "id": 2,
+      "category": "sales",
+      "title": "Раб",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
       "imageUrl2": "images/svg/icon 3.svg",
     },
     {
-      "id": 4,
-      "title": "Уборщик",
+      "id": 2,
+      "category": "freelance",
+      "title": "Раб",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
       "imageUrl2": "images/svg/icon 3.svg",
     },
     {
-      "id": 5,
-      "title": "Уборщик",
+      "id": 2,
+      "category": "freelance",
+      "title": "Раб",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
       "imageUrl2": "images/svg/icon 3.svg",
     },
-    {
-      "id": 6,
-      "title": "Уборщик",
-      "title1": "ОТ 100000 РУБ",
-      "imageUrl": "images/svg/icon 1.svg",
-      "imageUrl1": "images/svg/icon 2.svg",
-      "imageUrl2": "images/svg/icon 3.svg",
-    },
+    
     
   ];
 
@@ -116,9 +164,24 @@ document.addEventListener('DOMContentLoaded', function () {
     return jobPost;
   }
 
-  
-  items.forEach(item => {
-    const jobPostElement = createJobPost(item);
-    sectionJob.appendChild(jobPostElement);
+ 
+  function showCategory(category) {
+    sectionJob.innerHTML = '';
+    const filteredItems = items.filter(item => item.category === category);
+    filteredItems.forEach(item => {
+      const jobPostElement = createJobPost(item);
+      sectionJob.appendChild(jobPostElement);
+    });
+  }
+
+  document.querySelectorAll('.section_job_openings__link').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const category = this.getAttribute('data-category');
+      showCategory(category);
+    });
   });
+
+  showCategory('construction');
+
 });
