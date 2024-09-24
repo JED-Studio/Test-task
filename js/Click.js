@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = 'block';
             setTimeout(() => {
                 modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                // Добавляем класс для запрета прокрутки
             }, 10); // Небольшая задержка для запуска перехода
         });
     });
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('show');
         setTimeout(() => {
             modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+ // Удаляем класс для разрешения прокрутки
         }, 400); // Соответствует времени перехода в CSS (0.4s)
     };
 
@@ -29,8 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('click', (event) => {
-        if (event.target.classList.contains('modal')) {
-            closeModal(event.target);
+        if (event.target.classList.contains('modal-content')) {
+            const modalId = event.target.getAttribute('id');
+            const modal = document.getElementById(modalId);
+            closeModal(modal);
         }
     });
 });

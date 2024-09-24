@@ -23,7 +23,28 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "id": 2,
       "category": "construction",
-      "title": "Раб",
+      "title": "Повар",
+      "title1": "ОТ 100000 РУБ",
+      "imageUrl": "images/svg/icon 1.svg",
+      "imageUrl1": "images/svg/icon 2.svg",
+      "imageUrl2": "images/svg/icon 3.svg",
+      "h3": [
+        ["Task 1a",],
+        ["Responsibility 1a"],
+        ["Requirement 1a",]
+      ],
+
+      "li": [
+        ["порт"],
+        ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
+        ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
+      ]
+    },
+    
+    {
+      "id": 2,
+      "category": "office",
+      "title": "Доктор",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
@@ -44,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "id": 2,
       "category": "office",
-      "title": "Раб",
+      "title": "Менеджер",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
@@ -56,28 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
 
       "li": [
-        ["пашел ты"],
-        ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
-        ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
-      ]
-    },
-    
-    {
-      "id": 2,
-      "category": "office",
-      "title": "Раб",
-      "title1": "ОТ 100000 РУБ",
-      "imageUrl": "images/svg/icon 1.svg",
-      "imageUrl1": "images/svg/icon 2.svg",
-      "imageUrl2": "images/svg/icon 3.svg",
-      "h3": [
-        ["Task 1a",],
-        ["Responsibility 1a"],
-        ["Requirement 1a",]
-      ],
-
-      "li": [
-        ["пашел ты"],
+        ["ютуб"],
         ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
         ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
       ]
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "id": 2,
       "category": "finance",
-      "title": "Раб",
+      "title": "Директор",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
 
       "li": [
-        ["пашел ты"],
+        ["Россия"],
         ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
         ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
       ]
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "id": 2,
       "category": "finance",
-      "title": "Раб",
+      "title": "Автомеханик",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
 
       "li": [
-        ["пашел ты"],
+        ["система"],
         ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
         ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
       ]
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "id": 2,
       "category": "sales",
-      "title": "Раб",
+      "title": "Банкир",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
 
       "li": [
-        ["пашел ты"],
+        ["дом"],
         ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
         ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
       ]
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "id": 2,
       "category": "sales",
-      "title": "Раб",
+      "title": "Строитель",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
 
       "li": [
-        ["пашел ты"],
+        ["просто"],
         ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
         ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
       ]
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "id": 2,
       "category": "freelance",
-      "title": "Раб",
+      "title": "Моряк",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
 
       "li": [
-        ["пашел ты"],
+        ["лодка"],
         ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
         ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
       ]
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "id": 2,
       "category": "freelance",
-      "title": "Раб",
+      "title": "Системный администратор",
       "title1": "ОТ 100000 РУБ",
       "imageUrl": "images/svg/icon 1.svg",
       "imageUrl1": "images/svg/icon 2.svg",
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
 
       "li": [
-        ["пашел ты"],
+        ["рок"],
         ["Responsibility 1a", "Responsibility 1b", "Responsibility 1c"],
         ["Requirement 1a", "Requirement 1b", "Requirement 1c"]
       ]
